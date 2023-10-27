@@ -1,7 +1,7 @@
 _overmind_generic() {
   # Parse subcommands from 'overmind -h'
   local -a subcommands
-  subcommands=($(overmind -h | awk '/COMMANDS:/{flag=1; next} /GLOBAL OPTIONS:/{flag=0} flag {print $1}'))
+  subcommands=("${(@f)$(overmind -h | awk '/COMMANDS:/{flag=1; next} /GLOBAL OPTIONS:/{flag=0} flag {gsub(",", ""); print $1}')}")
 
   # Map full command names to their single-letter alternatives
   typeset -A subcmd_map

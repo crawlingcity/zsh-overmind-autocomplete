@@ -1,10 +1,24 @@
 How to install
 --------------
-Simply clone this repository and source the script:
+1. Prepare your environment. For more details please refer to [overmind's repo](https://github.com/DarthSim/overmind).
 
-```zsh
-git clone https://github.com/crawlingcity/zsh-overmind-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-overmind-autocomplete
-echo "source $(brew --prefix)/share/zsh-overmind-autocomplete/zsh-overmind-autocomplete.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-```
+    ```
+    # ~/.overmind.env
+    OVERMIND_SOCKET=/path/to/.overmind.sock
+    OVERMIND_PROCFILE=/path/to/Procfile.dev
+    ```
+2. Clone this repository in oh-my-zsh's plugins directory:
+
+    ```zsh
+    git clone https://github.com/crawlingcity/zsh-overmind-autocomplete.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-overmind-autocomplete
+    ```
+
+3. Activate the plugin in `~/.zshrc`:
+
+    ```zsh
+    plugins=( [plugins...] zsh-overmind-autocomplete)
+    ```
+
+4. Restart zsh (such as by opening a new instance of your terminal emulator).
 
 Then restart zsh (such as by opening a new instance of your terminal emulator).

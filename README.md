@@ -29,4 +29,4 @@ job
 job-2
 
 This allows to use it like this without having to use quotes:
-om r job*
+`om r job*`

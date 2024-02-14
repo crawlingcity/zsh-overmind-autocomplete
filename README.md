@@ -21,4 +21,12 @@ How to install
 
 4. Restart zsh (such as by opening a new instance of your terminal emulator).
 
-Then restart zsh (such as by opening a new instance of your terminal emulator).
+# personal alias
+`alias om='noglob overmind'`
+
+List of jobs:
+job
+job-2
+
+This allows to use it like this without having to use quotes:
+om r job*
